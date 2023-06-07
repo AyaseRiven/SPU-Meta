@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quests",
+  "info": {
+    "singularName": "quest",
+    "pluralName": "quests",
+    "displayName": "Quest",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

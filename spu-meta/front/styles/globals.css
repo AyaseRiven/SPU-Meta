@@ -1,0 +1,476 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* background-image: url("../public/image/4-1@2x.png");
+  background-size: cover;
+  background-position: center;
+  position: sticky; */
+  /* background-color: #f2f2f2; */
+  /* background-image: url("../public/image/4-1@2x.png"),
+    url("../public/image/4-1@2x.png"); */
+  background-position: bottom, top;
+  background-repeat: no-repeat, repeat;
+  background-color: rgb(0, 0, 56, 1);
+}
+
+.font_d {
+  font-size: 2.0833vw;
+}
+.font_m {
+  font-size: (32/900) * 100vw;
+}
+.Header {
+  /* background-color: #f2f2f2; */
+  background-image: url("../public/image/4-1@2x.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: 0px -45px;
+  /* height: 100vh; */
+}
+@media only screen and (min-width: 1240px) {
+  .Header {
+    background-position: 0px -110px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .Header {
+    background-position: 0px -45px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .Header {
+    background-position: 0px -110px;
+    height: 100vh;
+  }
+}
+.blogs {
+  background-image: url("../public/image/4-1@2x.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: 840px 989px;
+  height: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .blogs {
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: -150px -35px;
+    height: 100vh;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .blogs {
+    background-position: -150px -35px;
+    height: 100vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .blogs {
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: 0px -45px;
+    height: 100vh;
+  }
+}
+.blogs-foot {
+  background-image: url("../public/image/5-1@2x.png");
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: 0px -45px;
+  height: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .blogs-foot {
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: 0px -20px;
+    height: 50vh;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .blogs-foot {
+    background-position: 0px -20px;
+    height: 50vh;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .blogs-foot {
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: 0px -35px;
+    height: 85vh;
+  }
+}
+.bg_main {
+  background-image: url("../public/image/bg_main_mobile.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+@media only screen and (min-width: 768px) {
+  .bg_main {
+    background-image: url("../public/image/bg_main.png");
+    height: 100%;
+    background-position: center;
+    background-position: 40%;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .bg_main {
+    height: 100%;
+    background-position: 70% 0%;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .bg_main {
+    height: 100%;
+    background-position: 0% -2%;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+}
+.bg_FQAs {
+  /* background-image: url("../public/image/4-1@2x.png"); */
+  background-color: rgb(0, 0, 56, 1);
+  background-repeat: repeat;
+  background-size: cover;
+  height: auto;
+}
+.bg_contact {
+  background-image: url("../public/image/5-1.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+@media only screen and (min-width: 768px) {
+  .bg_contact {
+    height: 100%;
+    background-position: 0px 20px;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .bg_contact {
+    height: 100vh;
+    background-position: 0px -100px;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+}
+
+.font-db {
+  font-family: "db_heavent_bd", sans-serif;
+}
+.bg-container {
+  background-color: #f2f2f2;
+  background-image: url("../public/image/5-1.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.image_social {
+  background-image: url("../public/image/icon_social.png");
+  background-size: 11px 56px;
+}
+@media only screen and (min-width: 426px) {
+  .image_social {
+    background-size: 8px 52px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .image_social {
+    background-size: 8px 45px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .image_social {
+    background-size: 18px 102px;
+  }
+}
+
+.image_footer {
+  background-image: url("../public/image/footertree.png");
+  z-index: 30px;
+  background-size: 250px 305px;
+}
+@media only screen and (min-width: 374px) {
+  .image_footer {
+    background-size: 300px 311px;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .image_footer {
+    background-size: 326px 314px;
+  }
+}
+
+.app_store {
+  width: 40%;
+}
+
+.react-player {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.backgroundRef {
+  @apply fixed left-0 top-0 w-full z-10 ease-in duration-300 lg:pt-6 lg:pb-3;
+}
+
+.backgroundRefc {
+  background-color: beige;
+}
+
+.image-about {
+  background-color: rgb(0, 0, 56, 1);
+}
+
+/* ---------------------------- */
+/* icon */
+
+.tree {
+  background-image: url("../public/image/footertree.png");
+  background-size: 26rem 28rem;
+  background-repeat: no-repeat;
+  background-position: left calc(-460%) top calc(105%);
+}
+@media only screen and (min-width: 768px) {
+  .tree {
+    background-size: 26rem 28rem;
+    background-repeat: no-repeat;
+    background-position: left calc(3%) top calc(140%);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .tree {
+    background-size: 30rem 36rem;
+    background-repeat: no-repeat;
+    background-position: left calc(-115%) top calc(99%);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .tree {
+    background-size: 35rem 45rem;
+    background-repeat: no-repeat;
+    background-position: left calc(-21%) top calc(174%);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .tree {
+    background-size: 64rem 66rem;
+    background-repeat: no-repeat;
+    background-position: left calc(3%) top calc(-145%);
+  }
+}
+
+.tree2 {
+  background-image: url("../public/image/tree2.png");
+  z-index: 30px;
+  background-size: 250px 305px;
+}
+@media only screen and (min-width: 374px) {
+  .tree2 {
+    background-size: 300px 311px;
+  }
+}
+@media only screen and (min-width: 425px) {
+  .tree2 {
+    background-size: 326px 314px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .tree2 {
+    background-size: 16rem 16rem;
+    background-repeat: no-repeat;
+    background-position: left calc(-18%) top calc(-5%);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .tree2 {
+    background-size: 20rem 20rem;
+    background-repeat: no-repeat;
+    background-position: left calc(-5%) top calc(-5%);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .tree2 {
+    background-size: 28rem 40rem;
+    background-repeat: no-repeat;
+    background-position: left calc(-20%) top calc(-10%);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .tree2 {
+    background-size: 64rem 66rem;
+    background-repeat: no-repeat;
+    background-position: left calc(3%) top calc(-145%);
+  }
+}
+
+.coral01 {
+  background-image: url("../public/image/coral01.png");
+  background-size: 15rem 12rem;
+  background-repeat: no-repeat;
+  background-position: left calc(120%) top calc(12%);
+}
+@media only screen and (min-width: 1024px) {
+  .coral01 {
+    background-size: 20rem 20rem;
+    background-position: left calc(96%) top calc(12%);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .coral01 {
+    background-size: 25rem 20rem;
+    background-position: left calc(101%) top calc(12%);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .coral01 {
+    background-size: 45rem 25rem;
+    background-repeat: no-repeat;
+    background-position: left calc(94%) top calc(19%);
+  }
+}
+.coral02 {
+  background-image: url("../public/image/coral02.png");
+  background-size: 18rem 13rem;
+  background-repeat: no-repeat;
+  background-position: left calc(95%) top calc(15%);
+}
+@media only screen and (min-width: 768px) {
+  .coral02 {
+    background-size: 18rem 13rem;
+    background-repeat: no-repeat;
+    background-position: left calc(95%) top calc(15%);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .coral02 {
+    background-size: 24rem 16rem;
+    background-repeat: no-repeat;
+    background-position: left calc(99%) top calc(15%);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .coral02 {
+    background-size: 35rem 25rem;
+    background-repeat: no-repeat;
+    background-position: left calc(98%) top calc(1%);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .coral02 {
+    background-size: 50rem 40rem;
+    background-repeat: no-repeat;
+    background-position: left calc(188%) top calc(150%);
+  }
+}
+
+.star01 {
+  background-image: url("../public/image/star01.png");
+  background-size: 10rem 12rem;
+  background-repeat: no-repeat;
+  background-position: left calc(-60%) top calc(76%);
+}
+@media only screen and (min-width: 768px) {
+  .star01 {
+    background-size: 8rem 8rem;
+    background-repeat: no-repeat;
+    background-position: left calc(-18%) top calc(40%);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .star01 {
+    background-size: 12rem 12rem;
+    background-repeat: no-repeat;
+    background-position: left calc(-40%) top calc(-10%);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .star01 {
+    background-size: 12rem 18rem;
+    background-repeat: no-repeat;
+    background-position: left calc(-30%) top calc(-20%);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .star01 {
+    background-size: 26rem 30rem;
+    background-repeat: no-repeat;
+    background-position: left calc(1050%) top calc(90%);
+  }
+}
+
+.mus01 {
+  background-image: url("../public/image/mus01.png");
+  background-size: 16rem 16rem;
+  background-repeat: no-repeat;
+  background-position: left calc(-580%) top calc(-20%);
+}
+@media only screen and (min-width: 768px) {
+  .mus01 {
+    background-size: 14rem 14rem;
+    background-repeat: no-repeat;
+    background-position: left calc(130%) top calc(44%);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .mus01 {
+    background-size: 14rem 14rem;
+    background-repeat: no-repeat;
+    background-position: left calc(130%) top calc(44%);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .mus01 {
+    background-size: 14rem 14rem;
+    background-repeat: no-repeat;
+    background-position: left calc(130%) top calc(44%);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .mus01 {
+    background-size: 30rem 40rem;
+    background-repeat: no-repeat;
+    background-position: left calc(370%) top calc(50%);
+  }
+}
+
+.dimon01 {
+  background-image: url("../public/image/dimon01.png");
+  background-size: 8rem 8rem;
+  background-repeat: no-repeat;
+  background-position: left calc(-110%) top calc(15%);
+}
+@media only screen and (min-width: 768px) {
+  .dimon01 {
+    background-size: 8rem 8rem;
+    background-repeat: no-repeat;
+    background-position: left calc(-110%) top calc(15%);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .dimon01 {
+    background-size: 9rem 9rem;
+    background-repeat: no-repeat;
+    background-position: left calc(-30%) top calc(15%);
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .dimon01 {
+    background-size: 20rem 20rem;
+    background-repeat: no-repeat;
+    background-position: left calc(-95%) top calc(90%);
+  }
+}
+/* ---------------------------- */

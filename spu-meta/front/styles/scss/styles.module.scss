@@ -1,0 +1,9 @@
+$primary-color: #0070f3;
+.backgroundRef {
+  @apply fixed left-0 top-0 w-full z-10 ease-in duration-300 lg:pt-6 lg:pb-3;
+  // background-color: $primary-color;
+}
+
+.backgroundRefc {
+  background-color: #0070f3;
+}
