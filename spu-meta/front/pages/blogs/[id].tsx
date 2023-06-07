@@ -93,14 +93,6 @@ export default function BlogDetail({ blog }) {
                 <p className="text-gray-500 leading-6 md:leading-6 3xl:leading-9 font-medium font-size-sm-[24] md:font-size-[32]">
                     {blog.data.attributes.description}
                 </p>
-                {/* <p className=" pt-12 leading-6  md:leading-6 3xl:leading-9 md:pt-8 md:py-10 3xl:py-20 text-gray-500 font-medium font-size-sm-[24] md:font-size-[32]">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Doloribus nam voluptatum saepe dolorem aliquam architecto
-                  laborum accusamus corrupti suscipit assumenda consequatur
-                  tempore, harum deleniti, eius sed iste deserunt totam
-                  sapiente? Nisi quod, ut minus quos id optio ad assumenda?
-                  Est.
-                </p> */}
               </div>
             </div>
           </div>
