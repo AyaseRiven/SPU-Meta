@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { useQuery } from "react-query";
-import { getAboutData } from "../../front/api/api_about/index"
+import { getAboutData } from "../../front/api/api_about/index";
 
 const About = () => {
   const API_KEY = process.env.STRAPI_API_KEY;
@@ -16,10 +16,7 @@ const About = () => {
     queryKey: ["getApiAbout"],
     queryFn: async () => getAboutData(),
   });
-  useEffect(() => {
-    // name();
-    // console.log(data?.result.data.attributes.app_store.data.attributes.url);
-  }, [data]);
+  useEffect(() => {}, [data]);
   return (
     <div id="about">
       <div>
@@ -34,13 +31,13 @@ const About = () => {
         <div className=" container mx-auto px-6 md:px-[5.5rem] lg:px-[9.2rem] xl:px-[9.3rem] 3xl:px-[22.7rem] pt-24 md:pt-20 xl:pt-36 3xl:pt-52 ">
           <div className="flex flex-col pb-6 md:pb-12 xl:pb-28 3xl:pb-40 leading-normal">
             <h5 className=" md:mb-2 font-size-sm-[40] md:font-size-[72] text-center font-bold tracking-wider text-pink-600">
-            {data?.result.data.attributes.header}
+              {data?.result.data.attributes.header}
             </h5>
             <p className="hidden md:block font-normal font-size-sm-[24] md:font-size-[32] text-white text-center tracking-wider">
-            {data?.result.data.attributes.sub_header}
+              {data?.result.data.attributes.sub_header}
             </p>
             <p className="md:hidden font-normal font-size-sm-[24] md:font-size-[32] text-white text-center md:tracking-wider">
-            {data?.result.data.attributes.sub_header}
+              {data?.result.data.attributes.sub_header}
             </p>
           </div>
           <div className="relative md:float-right">
@@ -56,13 +53,8 @@ const About = () => {
           </div>
           <div className="font-normal 3xl:h-96 xl:py-2  3xl:py-4 text-gray-400">
             <p className="hidden md:block font-size-sm-[24]  w-full md:w-[55%] 3xl:w-[48%] md:pr-20 pt-4 md:pt-1 3xl:pt-0 md:font-size-[32] text-center md:text-start md:leading-4 lg:leading-6 xl:leading-7 3xl:leading-9 tracking-wider ">
-            {data?.result.data.attributes.description}
+              {data?.result.data.attributes.description}
             </p>
-            {/* <p className="pb-16 md:pb-0 md:hidden font-size-sm-[24]  w-full md:w-[55%] 3xl:w-[48%] md:pr-20 pt-4 md:pt-1 3xl:pt-0 md:font-size-[32] text-center md:text-start md:leading-4 lg:leading-6 xl:leading-7 3xl:leading-9 md:tracking-wider ">
-              Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
-              nam no suscipit At nam minimum ponderum. Et has minim elitr
-              intellegat. Et has minim litr intellegat. Mea aeterno ...
-            </p> */}
             <div className="relative w-44 mx-auto md:mx-0  md:w-28 lg:w-40 xl:w-56 3xl:w-80 md:-bottom-9 xl:-bottom-20 3xl:-bottom-20">
               <div className="absolute inset-[-4px] bg-gradient-to-r from-pink-700  to-pink-700 rounded-full blur-xl opacity-100 transition duration-200 "></div>
               <Link

@@ -46,10 +46,10 @@ const Contact = () => {
               <p className="text-gray-400 tracking-wider md:tracking-normal font-size-sm-[24] md:font-size-[32] leading-3">
                 Line : {data?.result.data.attributes.line}
               </p>
-              <p className="text-gray-400 tracking-wider md:tracking-normal font-size-sm-[24] md:font-size-[32] pb-8 md:pb-5 xl:pb-10 3xl:pb-20">
+              <p className="text-gray-400 tracking-wider md:tracking-normal font-size-sm-[24] md:font-size-[32] pb-8 md:pb-5 lg:pb-4 xl:pb-8 3xl:pb-20">
                 Tel : {data?.result.data.attributes.tel}
               </p>
-              <p className="text-gray-400 tracking-wider md:tracking-normal font-size-sm-[24] md:font-size-[32]">
+              <p className="text-gray-400 lg:w-52 xl:w-72 3xl:w-96 md:pt-3 lg:pt-0 3xl:pt-0 tracking-wider md:tracking-normal font-size-sm-[24] md:font-size-[32]">
                 {data?.result.data.attributes.address}
               </p>
               {/* <p className="text-gray-400 tracking-wider md:tracking-normal font-size-sm-[24] md:font-size-[32] leading-5">

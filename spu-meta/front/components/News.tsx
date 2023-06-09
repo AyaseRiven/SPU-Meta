@@ -5,8 +5,10 @@ import Link from "next/link";
 interface Dataset {
   id: number;
   attributes: {
-    header: string;
+    title: string;
     description: string;
+    blog_header: string;
+    news_body: string;
     date: string;
     image: {
       data: {
@@ -25,7 +27,7 @@ const News = () => {
   const API_BASE = process.env.STRAPI_API_BASE_URL;
 
   useEffect(() => {
-    fetch(`${API_BASE}/api/news/?populate=*`, {
+    fetch(`${API_BASE}/api/blogs/?populate=*&sort=id`, {
       headers: {
         Authorization: `Bearer ${API_KEY}`,
       },
@@ -78,13 +80,13 @@ const News = () => {
                   </div>
                   <div className=" py-6 md:py-8 3xl:py-10 max-sm:text-center ">
                     <div className="font-bold text-black -tracking-tighter font-size-sm-[32] md:font-size-[40] ">
-                      {data.attributes.header}
+                      {data.attributes.title}
                     </div>
                     <div className=" font-semibold text-black md:text-pink-600 font-size-sm-[24] md:font-size-[32] pb-2 ">
                       {data.attributes.date}
                     </div>
                     <p className=" text-gray-600 leading-8 font-normal  font-size-sm-[24] md:font-size-[32]">
-                      {data.attributes.description}
+                      {data.attributes.news_body}
                     </p>
                   </div>
                 </Link>

@@ -31,9 +31,6 @@ const Main = () => {
               <p className="leading-normal md:mr-[65%] xl:mr-[60%] 3xl:mr-[55%]  tracking-wide font-size-sm-[24] md:font-size-[40] 3xl:font-size-[40] text-gray-100">
                 {data?.result.data.attributes.sub_header}
               </p>
-              {/* <p className=" leading-3 font-extralight font-size-sm-[24] md:font-size-[40] 3xl:font-size-[40] tracking-[1px] text-gray-100">
-                    Spu Metavarse
-                  </p> */}
               <div className="absolute md:relative md:mt-4 lg:mt-6 xl:mt-12 3xl:mt-14 3xl:bottom-[0.25rem] inset-x-0 bottom-0 pb-24 justify-center text-center md:text-start cursor-pointer">
                 <div className="mx-auto px-6 md:px-0 w-60 justify-center text-center md:mx-0 md:w-40 lg:w-56 xl:w-72 3xl:w-96 3xl:pt-0">
                   <div className="relative">

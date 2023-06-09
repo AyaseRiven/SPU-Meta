@@ -7,8 +7,10 @@ import { getNewsData } from "@/api/api_news";
 interface Dataset {
   id: number;
   attributes: {
-    header: string;
+    title: string;
     description: string;
+    blog_header: string;
+    news_body: string;
     date: string;
     image: {
       data: {
@@ -33,7 +35,7 @@ const Main_News = () => {
   useEffect(() => {}, [data]);
 
   useEffect(() => {
-    fetch(`${API_BASE}/api/news/?populate=*`, {
+    fetch(`${API_BASE}/api/blogs/?populate=*&sort=id`, {
       headers: {
         Authorization: `Bearer ${API_KEY}`,
       },
@@ -43,7 +45,7 @@ const Main_News = () => {
   }, [[]]);
 
   return (
-    <div id="Main_News" className="bg_News">
+    <div id="Main_News" key={data?.result.data.id} className="bg_News">
       <div className=" container mx-auto px-6 md:px-[5.5rem] lg:px-[9.2rem] xl:px-[9.3rem] 3xl:px-[22.7rem] pt-20 pb-20 md:pt-28 xl:pt-48 3xl:pt-40 md:pb-20 3xl:pb-40 ">
         <div className="mt-6 pb-6 3xl:mt-20 3xl:pb-28">
           <h1 className="mb-2 3xl:mb-8 font-size-sm-[40] md:font-size-[72]   font-bold leading-none tracking-wider text-pink-600  text-center">
@@ -56,48 +58,46 @@ const Main_News = () => {
         <div className="grid grid-cols-1 md:px-[0px] md:grid-cols-3 gap-6 md:gap-4 3xl:gap-6 xl:pb-8 3xl:pb-4">
           {/* <!-- Card image --> */}
           {dataList.slice(0, 3).map((data: Dataset) => (
-            <>
-              <div>
-                <div className="relative">
-                  <div className="absolute -inset-1  rounded-3xl bg-gradient-to-br from-sky-400 to-pink-600 blur-2xl opacity-100 transition duration-200 "></div>
-                  <div className="relative rounded-3xl w-auto justify-center bg-gradient-to-br from-sky-600 to-pink-600  ">
-                    <div className="absolute text-xl top-2 left-2 3xl:top-4 3xl:left-4">
-                      <span className=" absolute w-8 h-8 md:w-6 md:h-6 lg:w-8 lg:h-8  3xl:w-12 3xl:h-12 rounded-full flex items-center justify-center bg-gradient-to-r from-pink-700 to-pink-600 ring-1 ring-slate-900/5 shadow-lg cursor-pointer">
-                        <Image
-                          className=" md:w-[15px] md:h-[15px] lg:w-[20px] lg:h-[20px] "
-                          src="/image/ping_highlight.png"
-                          alt="me"
-                          width="20"
-                          height="20"
-                        />
-                      </span>
-                      <i className="fa fa-heart text-white hover:text-red-light ml-4 mt-4 cursor-pointer"></i>
-                    </div>
-                    <picture>
-                      <img
-                        className=" w-full rounded-3xl h-[200px] md:h-[120px] lg:h-[160px] xl:h-[220px] 3xl:h-[250px]"
-                        src={`${API_BASE}${data.attributes.image.data.attributes.url}`}
+            <Link href={"/blogs/" + data.id} key={data.id}>
+              <div className="relative">
+                <div className="absolute -inset-1  rounded-3xl bg-gradient-to-br from-sky-400 to-pink-600 blur-2xl opacity-100 transition duration-200 "></div>
+                <div className="relative rounded-3xl w-auto justify-center bg-gradient-to-br from-sky-600 to-pink-600  ">
+                  <div className="absolute text-xl top-2 left-2 3xl:top-4 3xl:left-4">
+                    <span className=" absolute w-8 h-8 md:w-6 md:h-6 lg:w-8 lg:h-8  3xl:w-12 3xl:h-12 rounded-full flex items-center justify-center bg-gradient-to-r from-pink-700 to-pink-600 ring-1 ring-slate-900/5 shadow-lg cursor-pointer">
+                      <Image
+                        className=" md:w-[15px] md:h-[15px] lg:w-[20px] lg:h-[20px] "
+                        src="/image/ping_highlight.png"
                         alt="me"
-                        width="100"
-                        height="100"
-                        sizes="(max-width: 425px) 33vw,(max-width: 640px) 50vw, (max-width: 768px) 50vw, 33vw"
+                        width="20"
+                        height="20"
                       />
-                    </picture>
+                    </span>
+                    <i className="fa fa-heart text-white hover:text-red-light ml-4 mt-4 cursor-pointer"></i>
                   </div>
-                </div>
-                <div className=" py-6 md:py-8 3xl:py-10 max-sm:text-center ">
-                  <div className="font-bold text-white -tracking-tighter font-size-sm-[32] md:font-size-[40] 3xl:mb-4">
-                    {data.attributes.header}
-                  </div>
-                  <div className=" font-medium text-pink-500 md:text-gray-400 font-size-sm-[24] md:font-size-[32] pb-2 ">
-                    {data.attributes.date}
-                  </div>
-                  <p className="text-gray-400 font-normal font-size-sm-[24] md:font-size-[32]">
-                    {data.attributes.description}
-                  </p>
+                  <picture>
+                    <img
+                      className=" w-full rounded-3xl h-[200px] md:h-[120px] lg:h-[160px] xl:h-[220px] 3xl:h-[250px]"
+                      src={`${API_BASE}${data.attributes.image.data.attributes.url}`}
+                      alt="me"
+                      width="100"
+                      height="100"
+                      sizes="(max-width: 425px) 33vw,(max-width: 640px) 50vw, (max-width: 768px) 50vw, 33vw"
+                    />
+                  </picture>
                 </div>
               </div>
-            </>
+              <div className=" py-6 md:py-8 3xl:py-10 max-sm:text-center ">
+                <div className="font-bold text-white -tracking-tighter font-size-sm-[32] md:font-size-[40]">
+                  {data.attributes.title}
+                </div>
+                <div className=" font-medium text-pink-500 md:text-gray-400 font-size-sm-[24] md:font-size-[32] pb-2 ">
+                  {data.attributes.date}
+                </div>
+                <p className="text-gray-400 font-normal font-size-sm-[24] md:font-size-[32] 3xl:leading-7">
+                  {data.attributes.news_body}
+                </p>
+              </div>
+            </Link>
           ))}
         </div>
         <div className="relative w-44 mx-auto 3xl:mt-16 md:w-36 xl:w-56 3xl:w-80 -bottom-3">

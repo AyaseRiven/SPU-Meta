@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Collapsible from "react-collapsible";
-import Accordion from "./Accordion";
 import Faqs_blogs from "./Faqs_blogs";
 import { useQuery } from "react-query";
 import { getFAQsData } from "@/api/api_faqs";
@@ -29,12 +27,9 @@ const FAQs = () => {
                 <p className=" pb-12 md:pb-8 3xl:pb-24  font-size-sm-[24]   md:font-size-[32] 3xl:font-size-[32] text-black font-medium text-center">
                   {data?.result.data.attributes.sub_title}
                 </p>
-
-                <li className=" block md:flex md:justify-between py-2">
-                  <div className="grid grid-cols-3 gap-4">
-                    <Faqs_blogs />
-                  </div>
-                </li>
+                <div className=" flex flex-wrap">
+                  <Faqs_blogs />
+                </div>
               </div>
             </div>
           </div>

@@ -5,8 +5,10 @@ import Link from "next/link";
 interface Dataset {
   id: number;
   attributes: {
-    header: string;
+    title: string;
     description: string;
+    blog_header: string;
+    news_body: string;
     date: string;
     image: {
       data: {
@@ -24,7 +26,7 @@ const Header = () => {
   const API_KEY = process.env.STRAPI_API_KEY;
   const API_BASE = process.env.STRAPI_API_BASE_URL;
   useEffect(() => {
-    fetch(`${API_BASE}/api/news/?populate=*`, {
+    fetch(`${API_BASE}/api/blogs/?populate=*&sort=id`, {
       headers: {
         Authorization: `Bearer ${API_KEY}`,
       },
@@ -47,7 +49,7 @@ const Header = () => {
           {dataList.slice(0, 3).map((data: Dataset) => (
             <>
               {/* <!-- Card image --> */}
-              <Link href="/">
+              <Link href={"/blogs/" + data.id}>
                 <div className="relative">
                   <div className="relative rounded-3xl w-auto justify-center bg-gradient-to-br from-sky-600 to-pink-600  ">
                     <div className="absolute text-xl top-2 left-2 3xl:top-4 3xl:left-4">
@@ -76,13 +78,13 @@ const Header = () => {
                 </div>
                 <div className=" py-6 md:py-8 3xl:py-10 max-sm:text-center ">
                   <div className="font-bold text-black -tracking-tighter font-size-sm-[32] md:font-size-[40] ">
-                  {data.attributes.header}
+                    {data.attributes.title}
                   </div>
                   <div className=" font-semibold text-black md:text-pink-600 font-size-sm-[24] md:font-size-[32] pb-2 ">
-                  {data.attributes.date}
+                    {data.attributes.date}
                   </div>
                   <p className=" text-gray-600 leading-8 font-normal  font-size-sm-[24] md:font-size-[32]">
-                  {data.attributes.description}
+                    {data.attributes.news_body}
                   </p>
                 </div>
               </Link>

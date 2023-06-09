@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import Accordion from "./Accordion";
-import Collapsible from "react-collapsible";
+import React, { useEffect, useState, useRef, RefObject } from "react";
+import { createRoot } from "react-dom/client";
+import Faq from "./Faq";
 
 interface Dataset {
   id: number;
@@ -13,69 +13,64 @@ const Faqs_blogs = () => {
   const [dataList, setDataList] = useState<Dataset[]>([]);
   const API_KEY = process.env.STRAPI_API_KEY;
   const API_BASE = process.env.STRAPI_API_BASE_URL;
-  const [blogs, setBlogs] = useState(false);
-  const handleBlogs = () => {
-    setBlogs(!blogs);
-  };
+  const oneRef: RefObject<HTMLDivElement> = useRef(null);
+  const twoRef: RefObject<HTMLDivElement> = useRef(null);
+  const threeRef: RefObject<HTMLDivElement> = useRef(null);
+  const [hasFetchedData, setHasFetchedData] = useState(false);
+  // const faqOne = document.querySelector(".one") as HTMLElement | null;
 
   useEffect(() => {
-    fetch(`${API_BASE}/api/faqs/?populate=*`, {
+    fetch(`${API_BASE}/api/faqs/?populate=*&sort=id`, {
       headers: {
         Authorization: `Bearer ${API_KEY}`,
       },
     })
       .then((res) => res.json())
-      .then((result) => setDataList(result.data));
+      .then((result) => (setDataList(result.data), setHasFetchedData(true)));
+    return () => {
+      setDataList([]);
+      // Clean up any resources here
+    };
   }, []);
+
+  useEffect(() => {
+    // if (hasFetchedData) {
+    dataList.forEach((data, index) => {
+      const childElement = document.createElement("div");
+      createRoot(childElement).render(
+        <Faq
+          title={data.attributes.header}
+          body={data.attributes.description}
+        />
+      );
+      // console.log(data.id);
+      if (index % 3 == 0) {
+        if (oneRef.current) {
+          oneRef.current.appendChild(childElement);
+        }
+      }
+      if (index % 3 == 1) {
+        if (twoRef.current) {
+          twoRef.current.appendChild(childElement);
+        }
+      }
+      if (index % 3 == 2) {
+        if (threeRef.current) {
+          threeRef.current.appendChild(childElement);
+        }
+      }
+    });
+    // }
+  }, [hasFetchedData]);
+
   return (
-    <div>
-      {dataList.slice(0, 6).map((data: Dataset) => (
-        <>
-          <div className="flex flex-col w-full mr-[78px]">
-            <div
-              className={
-                blogs
-                  ? "relative pb-12 md:pb-14 xl:pb-16  3xl:mb-[70px] duration-300"
-                  : " relative pb-12 md:pb-14 xl:pb-16  3xl:mb-[80px] duration-300"
-              }
-            >
-              <Collapsible
-                trigger={
-                  <div
-                    onClick={handleBlogs}
-                    className=" flex max-w-screen-md items-center justify-center"
-                  >
-                    <div className="relative p-[0.10rem] rounded-r-2xl h-full 3xl:w-full rounded-md bg-gradient-to-r from-white via-pink-600 to-pink-600   md:rounded-r-lg 3xl:rounded-r-2xl md:p-[1px] 3xl:p-[1.75px] z-10">
-                      <div className=" absolute h-full z-50 rounded-r-2xl bg-pink-600 w-[4px] md:w-[2px] 3xl:w-[4px] 3xl:rounded-2xl "></div>
-                      <div className="relative rounded-r-2xl leading-8 h-full w-full bg-white   md:rounded-r-lg 3xl:rounded-r-2xl">
-                        <div className=" flex justify-between p-2 rounded-r-2xl md:p-1 xl:p-4 3xl:p-4 text-left bg-white md:leading-6 3xl:leading-8  md:rounded-r-lg 3xl:rounded-r-2xl">
-                          <p className="w-[70%] md:w-[80%] lg:w-[72%] 3xl:w-[66%] pl-4 py-2 3xl:p-2 font-size-sm-[32] md:font-size-[32] 3xl:font-size-[32] text-gray-700 ">
-                            {data.attributes.header}
-                          </p>
-                          <Accordion />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                }
-              >
-                <div>
-                  <div
-                    className={
-                      blogs
-                        ? " px-1 pt-1 md:pt-3 3xl:pt-6 font-size-sm-[24] md:font-size-[24] text-gray-500 font-medium text-left  3xl:leading-6"
-                        : "   px-1 pt-1 md:pt-3 3xl:pt-6 font-size-sm-[24] md:font-size-[24] text-gray-500 font-medium text-left  3xl:leading-6"
-                    }
-                  >
-                    {data.attributes.description}
-                  </div>
-                </div>
-              </Collapsible>
-            </div>
-          </div>
-        </>
-      ))}
-    </div>
+    <>
+      <div className=" md:flex justify-between">
+        <div ref={oneRef} className="one text-4xl"></div>
+        <div ref={twoRef} className="two text-4xl"></div>
+        <div ref={threeRef} className="three text-4xl"></div>
+      </div>
+    </>
   );
 };
 
