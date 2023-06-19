@@ -96,8 +96,8 @@ const Navbar2 = () => {
         <div
           className={
             nav
-              ? "md:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#080d38] text-center ease-in duration-300"
-              : "md:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#080d38] text-center ease-in duration-300"
+              ? "md:hidden overflow-y-scroll absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen  bg-[#080d38] text-center ease-in duration-300"
+              : "md:hidden overflow-y-scroll absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#080d38] text-center ease-in duration-300"
           }
         >
           <Link href="/" onClick={handleNav} className="cursor-pointer">
@@ -110,7 +110,7 @@ const Navbar2 = () => {
               height={200}
             />
           </Link>
-          <div className="py-2 absolute w-auto h-full px-8 top-12 mb:top-20">
+          <div className="py-2 absolute w-auto h-full px-8 top-12 mb:top-20 ">
             <p className="font-size-sm-[45] text-white mb:pb-8 font-semibold tracking-wider">
               Menu
             </p>
