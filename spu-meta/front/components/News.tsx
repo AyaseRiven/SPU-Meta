@@ -39,7 +39,7 @@ const News = () => {
     <>
       <div id="News" className="bg-container">
         <div className="container mx-auto px-6 md:px-[5.5rem] lg:px-[9.2rem] xl:px-[9.2rem] 3xl:px-[22.7rem] md:pb-32 pt-8">
-          <div className="md:pt-2 md:pb-6 3xl:pt-48 3xl:pb-24">
+          <div className="md:pb-6 3xl:pb-24">
             <p className="pb-8 font-size-sm-[40] md:font-size-[72] font-bold leading-none tracking-wider text-pink-600  text-center">
               Post News
             </p>
@@ -68,7 +68,7 @@ const News = () => {
                       </div>
                       <picture>
                         <img
-                          className=" w-full rounded-3xl h-[200px] md:h-[120px] lg:h-[160px] xl:h-[220px] 3xl:h-[250px]"
+                          className=" w-full rounded-3xl h-auto"
                           src={`${API_BASE}${data.attributes.image.data.attributes.url}`}
                           alt="me"
                           width="100"

@@ -35,7 +35,7 @@ const Navbar2 = () => {
   return (
     <div
       style={{ backgroundColor: `${color}` }}
-      className="fixed left-0 top-0 w-full ease-in duration-300 lg:pt-6 xl:pt-10 3xl:pt-14 lg:pb-3 z-50"
+      className="fixed left-0 top-0 w-full ease-in duration-300 lg:pt-6 xl:pt-10 3xl:pt-7 lg:pb-3 z-50"
     >
       <div className="flex items-center p-0 max-sm:justify-between ">
         <Link
@@ -43,9 +43,7 @@ const Navbar2 = () => {
           className="pl-4 lg:pl-0 md:mx-[0.8%] lg:mx-[3.5%] xl:mx-[5.2%]  3xl:mx-[6.3%] relative group cursor-pointer font-medium border-none"
         >
           <Image
-            src={
-              scrollPosition < 90 ? "/black_icon.svg" : "/white_white_icon.svg"
-            }
+            src={scrollPosition < 90 ? "/image/w_b.png" : "/image/w_w.png"}
             alt="logo"
             className="w-32 3xl:pt-0 md:w-24 lg:w-28 xl:w-36 3xl:w-64  "
             sizes="(max-width: 425px) 33vw,(max-width: 640px) 50vw, (max-width: 768px) 50vw, 33vw"
@@ -54,7 +52,7 @@ const Navbar2 = () => {
           />
         </Link>
         <div className="xl:container mx-3 lg:pl-2 3xl:pl-1 xl:px-0 2xl:px-5">
-          <ul style={{ color: `${textColor}` }} className=" hidden sm:flex">
+          <ul style={{ color: `${textColor}` }} className=" hidden md:flex">
             <li className="pt-3 pr-10 md:pr-6 xl:pr-8 3xl:pr-14 group font-size-[24] tracking-wide transition duration-300 ">
               <Link href="/" style={{ color: `${textColor}` }}>
                 Metaverse
@@ -98,8 +96,8 @@ const Navbar2 = () => {
         <div
           className={
             nav
-              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#080d38] text-center ease-in duration-300"
-              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#080d38] text-center ease-in duration-300"
+              ? "md:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#080d38] text-center ease-in duration-300"
+              : "md:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#080d38] text-center ease-in duration-300"
           }
         >
           <Link href="/" onClick={handleNav} className="cursor-pointer">
@@ -112,7 +110,7 @@ const Navbar2 = () => {
               height={200}
             />
           </Link>
-          <div className="py-2 absolute w-full h-screen px-8 top-12 mb:top-20">
+          <div className="py-2 absolute w-auto h-full px-8 top-12 mb:top-20">
             <p className="font-size-sm-[45] text-white mb:pb-8 font-semibold tracking-wider">
               Menu
             </p>
@@ -263,7 +261,7 @@ const Navbar2 = () => {
         </div>
 
         {/* <!-- Pin to top right corner --> */}
-        <div className=" sm:hidden relative h-16 w-6 ">
+        <div className=" md:hidden relative h-16 w-6 ">
           <div className="absolute right-[-20px] top-[-8px] mb:top-[-4px]">
             <button
               type="button"
@@ -272,7 +270,7 @@ const Navbar2 = () => {
               {/* Mobile Button */}
               <div
                 onClick={handleNav}
-                className="block sm:hidden z-10 justify-end"
+                className="block md:hidden z-10 justify-end"
               >
                 <Image
                   className={nav ? "ml-4 mb:ml-0 duration-300" : "duration-300"}

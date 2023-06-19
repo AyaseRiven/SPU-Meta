@@ -15,10 +15,10 @@ const Main = () => {
   return (
     <>
       <>
-        <div className="h-screen bg-[#050A30]">
+        <div className=" lg:h-screen bg-[#050A30]">
           <div className=" bg_main relative overflow-hidden rounded-lg shadow-lg ">
             <div className=" container mx-auto px-6 md:px-[5.5rem] lg:px-[9.2rem] xl:px-[9.3rem] 3xl:px-[22.7rem] pt-36 md:pt-36 text-center md:text-start lg:pt-48 3xl:pt-80">
-              <h1 className="font-size-sm-[80] md:font-size-[173] 3xl:font-size-[173] font-semibold text-sky-700 brightness-200 leading-3">
+              <h1 className="font-size-sm-[80] md:font-size-[173] iPad:text-[100vw] 3xl:font-size-[173] font-semibold text-sky-700 brightness-200 leading-3">
                 {data?.result.data.attributes.header}
               </h1>
               <p className="font-size-sm-[60] md:font-size-[105] 3xl:font-size-[118] font-semibold text-white brightness-200 tracking-[2px] mt-[2%]">
@@ -32,7 +32,7 @@ const Main = () => {
                 {data?.result.data.attributes.sub_header}
               </p>
               <div className="absolute md:relative md:mt-4 lg:mt-6 xl:mt-12 3xl:mt-14 3xl:bottom-[0.25rem] inset-x-0 bottom-0 pb-24 justify-center text-center md:text-start cursor-pointer">
-                <div className="mx-auto px-6 md:px-0 w-60 justify-center text-center md:mx-0 md:w-40 lg:w-56 xl:w-72 3xl:w-96 3xl:pt-0">
+                <div className="mx-auto px-6 sm:px-0 md:px-0 w-60 justify-center text-center md:mx-0 md:w-40 lg:w-56 xl:w-72 3xl:w-96 3xl:pt-0">
                   <div className="relative">
                     <div className="absolute inset-[0px] bg-gradient-to-r from-pink-700  to-pink-700 rounded-full blur opacity-100 transition duration-200 "></div>
                     <Link

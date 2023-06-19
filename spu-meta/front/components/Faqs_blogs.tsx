@@ -65,10 +65,10 @@ const Faqs_blogs = () => {
 
   return (
     <>
-      <div className=" md:flex justify-between">
-        <div ref={oneRef} className="one text-4xl"></div>
-        <div ref={twoRef} className="two text-4xl"></div>
-        <div ref={threeRef} className="three text-4xl"></div>
+      <div className=" md:flex justify-between gap-10">
+        <div ref={oneRef} className="one "></div>
+        <div ref={twoRef} className="two "></div>
+        <div ref={threeRef} className="three "></div>
       </div>
     </>
   );

@@ -5,11 +5,11 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className="footer">
-      <footer className=" bg-black text-center  text-white max-[426px]:hidden">
+      <footer className=" bg-black text-center  text-white hidden md:block">
         <div className="container mx-auto md:pt-6 xl:pt-8 3xl:pt-[4.3rem] md:px-20 lg:px-36 xl:px-[9.3rem] 3xl:px-[22.7rem] md:flex items-center md:justify-between">
           <Image
             className=" w-[3rem] lg:w-16 xl:w-20 3xl:w-28 3xl:-ml-1"
-            src="/white_white_icon.svg"
+            src="/image/w_w.png"
             alt="me"
             width="120"
             height="120"
@@ -160,7 +160,7 @@ const Footer = () => {
               <div className="">
                 <Image
                   className=" w-16 pb-6"
-                  src="/image/footer-icon.png"
+                  src="/image/w_w.png"
                   alt="me"
                   width="50"
                   height="50"
@@ -235,7 +235,7 @@ const Footer = () => {
                 admissions@spu.ac.th
               </div>
               <div className="flex text-neutral-400 font-size-sm-[24]  pb-1  ">
-                <p className="image_social mt-2 h-4 w-6 pr-4 bg-no-repeat bg-[left_calc(0%)_top_calc(28%)] ">
+                <p className="image_social mt-2 h-4 w-6 pr-4 sm:mt-3  bg-no-repeat bg-[left_calc(0%)_top_calc(28%)] ">
                   <style jsx>{`
                     .image {
                       background-image: url("../public/image/icon_social.png");
@@ -245,7 +245,7 @@ const Footer = () => {
                 SPU Mateverse
               </div>
               <div className="flex md:justify-start text-neutral-400  font-size-sm-[24] pb-1  ">
-                <p className="image_social mt-1 h-4 w-6 pr-4  bg-no-repeat bg-[left_calc(0%)_top_calc(63%)] ">
+                <p className="image_social mt-1 h-4 w-6 pr-4 sm:mt-3  bg-no-repeat bg-[left_calc(0%)_top_calc(63%)] ">
                   <style jsx>{`
                     .image {
                       background-image: url("../public/image/icon_social.png");
@@ -255,7 +255,7 @@ const Footer = () => {
                 @sripatum
               </div>
               <div className="flex md:justify-start text-neutral-400 font-size-sm-[24] pb-1  ">
-                <p className="image_social mt-2 h-6 w-6 pr-4  bg-no-repeat bg-[left_calc(0%)_top_calc(130%)] ">
+                <p className="image_social mt-2 h-6 w-6 pr-4 sm:mt-3  bg-no-repeat bg-[left_calc(0%)_top_calc(130%)] ">
                   <style jsx>{`
                     .image {
                       background-image: url("../public/image/icon_social.png");

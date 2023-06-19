@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useEffect, useRef, useState } from "react";
 import Main from "@/components/Main";
 import Navbar2 from "@/components/Navbar2";
 import About from "@/components/About";
@@ -8,6 +9,49 @@ import Contact from "@/components/Contact";
 import Image from "next/image";
 
 export default function Home() {
+  const [bgColor, setBgColor] = useState("transparent");
+  const [textColor, setTextColor] = useState("white");
+  // const [faqPosition, setFaqPosition] = useState(0);\
+  var faqOffsetTop = 0;
+  var conOffsetTop = 0;
+
+  useEffect(() => {
+    setTextColor("#F2F3F5");
+
+    const changeColor = () => {
+      // console.log(faqPosition);
+      if (
+        window.scrollY >= faqOffsetTop - 100 &&
+        window.scrollY <= conOffsetTop
+      ) {
+        setBgColor("#050A30");
+        setTextColor("#F2F3F5");
+      } else {
+        setBgColor("transparent");
+        setTextColor("#F2F3F5");
+      }
+    };
+    // console.log(window.scrollY);
+    const handleScroll = () => {
+      // getScrollPositon(document.documentElement.scrollTop);
+    };
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", changeColor);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  function handleFaqOffset(offsetTop: number) {
+    faqOffsetTop = offsetTop;
+    // console.log("in");
+    // console.log(position);
+  }
+  function handleConOffset(offsetTop: number) {
+    conOffsetTop = offsetTop;
+    // console.log("in");
+    // console.log(position);
+  }
   return (
     <>
       <Head>
@@ -17,7 +61,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Navbar2 />
+        <Navbar2 bgColor={bgColor} textColor={textColor} />
         <Main />
         <section className="absolute left-0 md:translate-y-[15%] 3xl:-translate-y-[15%]  z-10">
           <div className="coral02 w-40 h-48 md:w-40 md:h-48 lg:w-56 lg:h-56 xl:w-80 xl:h-96 3xl:h-[50rem] 3xl:w-[40rem] justify-end  z-50 "></div>
@@ -43,18 +87,18 @@ export default function Home() {
         <section className="absolute right-0 -translate-y-[45%]  z-10">
           <div className="mus01 w-60 h-[18rem]  md:h-[65rem] md:w-[35rem] justify-end  z-50 "></div>
         </section>
-        <FAQs />
+        <FAQs offsetTop={handleFaqOffset} />
         <section className="absolute left-0 -translate-y-[60%]  z-10">
           <div className="star01 w-60  h-[18rem] md:h-[30rem] md:w-[25rem] justify-end  z-50 "></div>
         </section>
-        <Contact />
+        <Contact offsetTop={handleConOffset} />
         <section className="absolute left-0 translate-y-[79%]  z-10">
           <div
             className=" coral01 md:w-[8rem] md:h-[9rem] lg:w-[10rem] 
           lg:h-[13rem] xl:w-[15rem] xl:h-[15rem] 3xl:h-[19.6rem] 3xl:w-[23rem] justify-end  z-50 "
           ></div>
         </section>
-        <section className="absolute right-0 -translate-y-[0%]  md:-translate-y-[45%]  z-10">
+        <section className="absolute right-0 -translate-y-[0%] min-[500px]:translate-y-[16%] sm:translate-y-[20%]  md:-translate-y-[45%]  z-10">
           <div className="tree w-96  h-[40rem]  mb:h-[42rem] md:h-[29rem] md:w-56 lg:h-[42rem] lg:w-[24rem]   xl:h-[48rem] xl:w-[24rem]  3xl:h-[63.8rem] 3xl:w-[35rem] justify-end  z-50 "></div>
         </section>
       </div>

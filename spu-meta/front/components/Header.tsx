@@ -66,7 +66,7 @@ const Header = () => {
                     </div>
                     <picture>
                       <img
-                        className=" w-full rounded-3xl h-[200px] md:h-[120px] lg:h-[160px] xl:h-[220px] 3xl:h-[250px]"
+                        className=" w-full rounded-3xl h-auto"
                         src={`${API_BASE}${data.attributes.image.data.attributes.url}`}
                         alt="me"
                         width="100"

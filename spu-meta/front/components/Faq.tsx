@@ -21,7 +21,7 @@ const Faq: React.FC<faqProps> = ({ title, body }) => {
   };
 
   return (
-    <div className="flex flex-col md:w-[85%]">
+    <div className="flex flex-col md:w-[85%] lg:w-full">
       <div
         className={
           blogs
@@ -36,11 +36,11 @@ const Faq: React.FC<faqProps> = ({ title, body }) => {
               onClick={handleBlogs}
               className=" flex h-28 md:h-14 lg:h-20 xl:h-24 3xl:h-[8rem] items-center justify-center"
             >
-              <div className="relative rounded-r-2xl h-full 3xl:w-full rounded-md bg-gradient-to-r from-white via-pink-600 to-pink-600 md:rounded-r-lg 3xl:rounded-r-2xl p-[0.1rem] md:p-[1px] 3xl:p-[1.75px] z-10">
+              <div className="relative rounded-r-2xl w-full h-full 3xl:w-full rounded-md bg-gradient-to-r from-white via-pink-600 to-pink-600 md:rounded-r-lg 3xl:rounded-r-2xl p-[0.1rem] md:p-[1px] 3xl:p-[1.75px] z-10">
                 <div className=" absolute h-full z-50 rounded-r-2xl bg-pink-600 w-[2px] md:w-[2px] 3xl:w-[4px] 3xl:rounded-2xl "></div>
                 <div className="relative rounded-r-2xl leading-8 h-full w-full bg-white md:rounded-r-lg 3xl:rounded-r-2xl">
-                  <div className=" flex justify-between items-center p-2 pl-4 md:pl-0 lg:pl-4 rounded-r-2xl text-left h-full bg-white md:leading-3 xl:leading-6 3xl:leading-8  md:rounded-r-lg 3xl:rounded-r-2xl">
-                    <p className="w-[66%] md:w-[66%] lg:w-[72%] 3xl:w-[78%] 3xl:pl-4 font-size-sm-[32] md:font-size-[28] lg:font-size-[32] 3xl:font-size-[32] text-gray-700 ">
+                  <div className=" flex justify-between items-center p-2 pl-4 md:pl-3 lg:pl-4 rounded-r-2xl text-left h-full bg-white md:leading-3 xl:leading-6 3xl:leading-8  md:rounded-r-lg 3xl:rounded-r-2xl">
+                    <p className="w-[66%] md:w-[66%] lg:w-[72%] 3xl:w-[78%] 3xl:pl-4 font-size-sm-[32] sm:font-size-sm-[20] md:font-size-[28] lg:font-size-[32] 3xl:font-size-[32] text-gray-700 ">
                       {title}
                     </p>
                     <div>
@@ -51,7 +51,7 @@ const Faq: React.FC<faqProps> = ({ title, body }) => {
                               className={
                                 blogs
                                   ? "w-6 h-3 md:w-6 md:h-2 3xl:w-14 3xl:h-4 text-center justify-center ease-in duration-500 "
-                                  : " w-6 h-3  md:w-6 md:h-2 3xl:w-14 3xl:h-4 text-center justify-center  ease-in duration-500 "
+                                  : " w-6 h-3 md:w-6 md:h-2 3xl:w-14 3xl:h-4 text-center justify-center  ease-in duration-500 "
                               }
                               src={
                                 blogs
@@ -77,8 +77,8 @@ const Faq: React.FC<faqProps> = ({ title, body }) => {
             <div
               className={
                 blogs
-                  ? " px-1 pt-4 md:pt-2 xl:pt-4 3xl:pt-6 font-size-sm-[24] md:font-size-[24] text-gray-500 font-medium text-left leading-5 md:leading-3 xl:leading-5 3xl:leading-6"
-                  : " px-1 pt-4 md:pt-2 xl:pt-4 3xl:pt-6 font-size-sm-[24] md:font-size-[24] text-gray-500 font-medium text-left leading-5 md:leading-3 xl:leading-5 3xl:leading-6"
+                  ? " px-1 pt-4 md:pt-2 xl:pt-4 3xl:pt-6 font-size-sm-[24] sm:font-size-sm-[20] md:font-size-[24] text-gray-500 font-medium text-left leading-5 md:leading-3 xl:leading-5 3xl:leading-6"
+                  : " px-1 pt-4 md:pt-2 xl:pt-4 3xl:pt-6 font-size-sm-[24] sm:font-size-sm-[20] md:font-size-[24] text-gray-500 font-medium text-left leading-5 md:leading-3 xl:leading-5 3xl:leading-6"
               }
             >
               {body}

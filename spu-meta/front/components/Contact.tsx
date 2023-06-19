@@ -1,28 +1,43 @@
-import { useEffect, useState } from "react";
+import { RefObject, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { text } from "stream/consumers";
 import Link from "next/link";
 import { getContactData } from "@/api/api_contact";
 import { useQuery } from "react-query";
 
-const Contact = () => {
+interface ConBodyProps {
+  offsetTop: (offsetTop: number) => void;
+}
+
+const Contact: React.FC<ConBodyProps> = ({ offsetTop }) => {
   const [firstname, setFirstName] = useState("");
   const [lastname, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const refCon: RefObject<HTMLDivElement> = useRef(null);
+
   const { data, isLoading } = useQuery({
     queryKey: ["getApiContact"],
     queryFn: async () => getContactData(),
   });
-  useEffect(() => {}, [data]);
+  useEffect(() => {
+    const getPosition = () => {
+      offsetTop(refCon.current?.offsetTop || 0);
+    };
+    window.addEventListener("scroll", getPosition);
+
+    return () => {
+      window.removeEventListener("scroll", getPosition); // Clear the timeout if the component is unmounted before the delay expires
+    };
+  }, []);
 
   return (
-    <div id="Contact">
-      <div className="bg_contact md:-mt-28 xl:-mt-40 3xl:mt-0 md:pt-4 h-auto">
-        <div className=" container mx-auto px-6 md:px-[5.5rem] lg:px-[9.2rem] xl:px-[9.3rem] 3xl:px-[22.5rem] pt-16 md:pt-12 xl:pt-36 3xl:pt-20 md:pb-28 xl:pb-32 ">
-          <div className="flex flex-col 3xl:p-4 xl:pb-8 3xl:pb-32 leading-normal">
-            <h5 className="mb-2 font-size-sm-[40]  md:font-size-[72] text-center font-bold tracking-wider text-pink-600">
+    <div ref={refCon} id="Contact">
+      <div className="bg_contact h-auto">
+        <div className=" container mx-auto px-6 sm:px-10 md:px-[5.5rem] lg:px-[9.2rem] xl:px-[9.3rem] 3xl:px-[22.5rem] pt-16 md:pt-12 xl:pt-36 3xl:pt-20 md:pb-28 3xl:pb-56 ">
+          <div className="flex flex-col 3xl:p-4 xl:pb-8 leading-normal">
+            <h5 className="mb-2 font-size-sm-[40] md:font-size-[72] text-center font-bold tracking-wider text-pink-600">
               {data?.result.data.attributes.title}
             </h5>
             <p className=" hidden md:block font-normal font-size-sm-[24]  md:font-size-[32] text-white text-center">
@@ -34,7 +49,7 @@ const Contact = () => {
           </div>
           <div className=" pt-6 md:pt-12 3xl:pt-0 grid md:grid-cols-2 gap-10">
             <div className="justify-center text-center md:text-start grow-0 shrink-0 basis-auto w-full ">
-              <h2 className="font-size-sm-[40] md:font-size-[40] text-white font-bold pb-4 md:pb-4 3xl:pb-8">
+              <h2 className="font-size-sm-[40] sm:font-size-sm-[32] md:font-size-[40] text-white font-bold pb-4 md:pb-4 3xl:pb-8">
                 ที่อยู่
               </h2>
               <p className="text-gray-400 tracking-wider md:tracking-normal font-size-sm-[24] md:font-size-[32] leading-3">
@@ -167,11 +182,11 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className=" mx-auto pt-16 pb-16 md:pt-0 w-36 md:w-28 xl:w-44 3xl:w-64">
-                  <div className="relative md:-bottom-8 lg:-bottom-10 xl:-bottom-16 3xl:-bottom-10">
-                    <div className="absolute -inset-0 bg-gradient-to-r from-pink-700  to-pink-600 rounded-full blur opacity-100 transition duration-200 "></div>
+                  <div className="relative md:-bottom-8 lg:-bottom-10 xl:-bottom-16 3xl:-bottom-14">
+                    <div className="absolute -inset-0 bg-gradient-to-r from-pink-700  to-pink-600 rounded-full blur opacity-100 transition duration-200"></div>
                     <Link
                       href="/"
-                      className="relative font-size-sm-[20] py-2 md:py-2 xl:py-3 3xl:py-4 w-auto md:font-size-[32] text-white justify-center bg-gradient-to-t from-pink-700 via-pink-700 to-pink-600 hover:opacity-80  cursor-pointer ring-1 ring-gray-900/5 rounded-full leading-none flex "
+                      className="relative font-size-sm-[20] py-3 md:py-2 xl:py-3 3xl:py-4 w-auto md:font-size-[32] text-white justify-center bg-gradient-to-t from-pink-700 via-pink-700 to-pink-600 hover:opacity-80  cursor-pointer ring-1 ring-gray-900/5 rounded-full leading-none flex "
                     >
                       ส่งข้อมูล
                       <Image

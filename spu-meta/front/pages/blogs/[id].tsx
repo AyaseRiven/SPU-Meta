@@ -66,7 +66,7 @@ export default function BlogDetail({ blog }: { blog: Blog }) {
       <>
         <Navbar />
         <div className="blogs bg-slate-200">
-          <div className="px-6 pt-32 md:px-[5.5rem] lg:px-[9.2rem] xl:px-[13.8rem] 3xl:px-[22.7rem] md:pt-28 lg:pt-48 xl:pt-56 3xl:pt-64">
+          <div className="px-6 pt-32 md:px-[5.5rem] lg:px-[9.2rem] xl:px-[13.8rem] 3xl:px-[22.7rem] md:pt-20 lg:pt-32 xl:pt-40 3xl:pt-64">
             <div>
               <h1 className="  font-bold leading-none tracking-wider text-pink-500 font-size-sm-[40] md:font-size-[72]  text-center">
                 {blog.data.attributes.title}
@@ -75,7 +75,7 @@ export default function BlogDetail({ blog }: { blog: Blog }) {
             <div className=" pt-12 md:pt-12 md:w-full overflow-hidden h-auto relative">
               <picture>
                 <img
-                  className="  w-full rounded-3xl h-[200px] md:h-[120px] lg:h-[160px] xl:h-[220px] 3xl:h-[650px]"
+                  className="  w-full rounded-3xl h-auto"
                   src={imageUrl}
                   alt="me"
                   width={1000}
@@ -83,7 +83,7 @@ export default function BlogDetail({ blog }: { blog: Blog }) {
                   sizes="(max-width: 425px) 33vw,(max-width: 640px) 50vw, (max-width: 768px) 50vw, 33vw"
                 />
               </picture>
-              <div className="py-8 mb-56 3xl:py-12 max-sm:text-center ">
+              <div className="py-8 xl:pb-48 3xl:pb-56 3xl:py-12 max-sm:text-center ">
                 <div className="font-bold font-size-sm-[32] tracking-wider md:font-size-[48]">
                   {blog.data.attributes.blog_header}
                 </div>
