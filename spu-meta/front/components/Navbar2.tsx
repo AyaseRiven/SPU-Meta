@@ -67,7 +67,7 @@ const Navbar2: React.FC<navProps> = ({ bgColor, textColor }) => {
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 md:h-[1%] 3xl:h-1 bg-pink-500"></span>
             </li>
             <li className="pt-3 pr-10 md:pr-6 xl:pr-8  3xl:pr-14 group font-size-[24] tracking-wide transition duration-300">
-              <Link href="/NewsPage" style={{ color: `${textColor}` }}>
+              <Link href="/blogs" style={{ color: `${textColor}` }}>
                 Blogs
               </Link>
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 md:h-[1%] 3xl:h-1 bg-pink-500"></span>
@@ -196,7 +196,7 @@ const Navbar2: React.FC<navProps> = ({ bgColor, textColor }) => {
               <div>
                 <div className="w-full  h-[80%] mb:h-[95%] bg-[#3f3d5f86] rounded-2xl shadow">
                   <Link
-                    href="/NewsPage"
+                    href="/blogs"
                     onClick={handleNav}
                     className="text-center"
                   >
@@ -226,8 +226,8 @@ const Navbar2: React.FC<navProps> = ({ bgColor, textColor }) => {
           <div
             className={
               nav
-                ? "absolute right-[-40px] duration-700   top-[-32px] mb:top-[-25px]  md:right-[-30px] md:top-[-50px]"
-                : "absolute right-[-500px] duration-700  top-[-32px] mb:top-[-25px]  md:right-[-30px] lg:right-[-16px] 3xl:right-[-16px] md:top-[-16px] lg:top-[-45px] xl:top-[-62px] 3xl:top-[-95px] "
+                ? "absolute right-[-40px] duration-700   top-[-34px] mb:top-[-30px]  md:right-[-30px] md:top-[-50px]"
+                : "absolute right-[-500px] duration-700  top-[-34px] mb:top-[-30px]  md:right-[-30px] lg:right-[-16px] 3xl:right-[-16px] md:top-[-16px] lg:top-[-45px] xl:top-[-62px] 3xl:top-[-95px] "
             }
           >
             <Link href="/">
@@ -244,7 +244,7 @@ const Navbar2: React.FC<navProps> = ({ bgColor, textColor }) => {
 
         {/* <!-- Pin to top right corner --> */}
         <div className=" md:hidden relative h-20 w-6 ">
-          <div className="absolute right-[-20px] top-[-4px] mb:top-[4px]">
+          <div className="absolute right-[-20px] top-[-4px] mb:top-[0px]">
             <button
               type="button"
               className="w-16 h-[2.80rem] mb:w-20 tracking-widest bg-cyan-500 hover:bg-cyan-400/90 focus:ring-1 focus:ring-[#00ffff]/50 rounded-bl-main justify-center inline-flex items-center mr-4 mb:mr-2 mb-2 z-50"

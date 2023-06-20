@@ -84,7 +84,7 @@ const Navbar2 = () => {
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 md:h-[1%] 3xl:h-1 bg-pink-500"></span>
             </li>
             <li className="pt-3 pr-10 md:pr-6 xl:pr-8  3xl:pr-14 group font-size-[24] tracking-wide transition duration-300">
-              <Link href="/NewsPage" style={{ color: `${textColor}` }}>
+              <Link href="/blogs" style={{ color: `${textColor}` }}>
                 Blogs
               </Link>
               <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 md:h-[1%] 3xl:h-1 bg-pink-500"></span>
@@ -96,8 +96,8 @@ const Navbar2 = () => {
         <div
           className={
             nav
-              ? "md:hidden overflow-y-scroll absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen  bg-[#080d38] text-center ease-in duration-300"
-              : "md:hidden overflow-y-scroll absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#080d38] text-center ease-in duration-300"
+              ? "md:hidden overflow-y-auto absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#080d38] text-center ease-in duration-300"
+              : "md:hidden overflow-y-auto absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-[#080d38] text-center ease-in duration-300"
           }
         >
           <Link href="/" onClick={handleNav} className="cursor-pointer">
@@ -110,7 +110,7 @@ const Navbar2 = () => {
               height={200}
             />
           </Link>
-          <div className="py-2 absolute w-auto h-full px-8 top-12 mb:top-20 ">
+          <div className="py-2 absolute w-auto h-screen px-8 top-12 mb:top-20">
             <p className="font-size-sm-[45] text-white mb:pb-8 font-semibold tracking-wider">
               Menu
             </p>
@@ -214,7 +214,7 @@ const Navbar2 = () => {
               <div>
                 <div className="w-full  h-[80%] mb:h-[95%] bg-[#3f3d5f86] rounded-2xl shadow">
                   <Link
-                    href="/NewsPage"
+                    href="/blogs"
                     onClick={handleNav}
                     className="text-center"
                   >
@@ -232,11 +232,11 @@ const Navbar2 = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className=" absolute bottom-2  mb:bottom-6">
-            <p className="font-size-sm-[18] text-gray-400">
-              © สงวนลิขสิทธิ์ 2566 Sripatum University Meraverse 2023
-            </p>
+            <div className=" relative mb:pt-16">
+              <p className="font-size-sm-[18] text-gray-400">
+                © สงวนลิขสิทธิ์ 2566 Sripatum University Meraverse 2023
+              </p>
+            </div>
           </div>
         </div>
         {/* <!-- Pin to top right corner --> */}
@@ -244,8 +244,8 @@ const Navbar2 = () => {
           <div
             className={
               nav
-                ? "absolute right-[-40px] duration-700   top-[-32px] mb:top-[-25px]  md:right-[-30px] md:top-[-50px]"
-                : "absolute right-[-500px] duration-700  top-[-32px] mb:top-[-25px]  md:right-[-30px] lg:right-[-16px] 3xl:right-[-16px] md:top-[-16px] lg:top-[-45px] xl:top-[-62px] 3xl:top-[-95px] "
+                ? "absolute right-[-40px] duration-700   top-[-34px] mb:top-[-30px]  md:right-[-30px] md:top-[-50px]"
+                : "absolute right-[-500px] duration-700  top-[-34px] mb:top-[-30px]  md:right-[-30px] lg:right-[-16px] 3xl:right-[-16px] md:top-[-16px] lg:top-[-40px] xl:top-[-60px] 3xl:top-[-72px] "
             }
           >
             <Link href="/">
@@ -262,7 +262,7 @@ const Navbar2 = () => {
 
         {/* <!-- Pin to top right corner --> */}
         <div className=" md:hidden relative h-20 w-6 ">
-          <div className="absolute right-[-20px] top-[-4px] mb:top-[4px]">
+          <div className="absolute right-[-20px] top-[-4px] mb:top-[0px]">
             <button
               type="button"
               className="w-16 h-[2.80rem] mb:w-20 tracking-widest bg-cyan-500 hover:bg-cyan-400/90 focus:ring-1 focus:ring-[#00ffff]/50 rounded-bl-main justify-center inline-flex items-center mr-4 mb:mr-2 mb-2 z-50"

@@ -188,11 +188,11 @@ body {
 }
 .image_social {
   background-image: url("../public/image/icon_social.png");
-  background-size: 11px 56px;
+  background-size: 18px 80px;
 }
 @media only screen and (min-width: 426px) {
   .image_social {
-    background-size: 8px 52px;
+    background-size: 20px 87px;
   }
 }
 @media only screen and (min-width: 522px) {
@@ -251,13 +251,13 @@ body {
   background-image: url("../public/image/footertree.png");
   background-size: 26rem 28rem;
   background-repeat: no-repeat;
-  background-position: left calc(-600%) top calc(120%);
+  background-position: left calc(0%) top calc(120%);
 }
 @media only screen and (min-width: 412px) {
   .tree {
     background-size: 26rem 28rem;
     background-repeat: no-repeat;
-    background-position: left calc(-408%) top calc(109%);
+    background-position: left calc(1%) top calc(109%);
   }
 }
 @media only screen and (min-width: 768px) {

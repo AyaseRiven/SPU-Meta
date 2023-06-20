@@ -92,14 +92,14 @@ export default function Home() {
           <div className="star01 w-60  h-[18rem] md:h-[30rem] md:w-[25rem] justify-end  z-50 "></div>
         </section>
         <Contact offsetTop={handleConOffset} />
-        <section className="absolute left-0 translate-y-[79%]  z-10">
+        <section className="absolute left-0 translate-y-[79%]  z-0">
           <div
             className=" coral01 md:w-[8rem] md:h-[9rem] lg:w-[10rem] 
-          lg:h-[13rem] xl:w-[15rem] xl:h-[15rem] 3xl:h-[19.6rem] 3xl:w-[23rem] justify-end  z-50 "
+          lg:h-[13rem] xl:w-[15rem] xl:h-[15rem] 3xl:h-[19.6rem] 3xl:w-[23rem] justify-end"
           ></div>
         </section>
-        <section className="absolute right-0 translate-y-[0%] min-[500px]:translate-y-[16%] sm:translate-y-[20%]  md:-translate-y-[45%]  z-10">
-          <div className="tree w-96  h-[41rem]  mb:h-[42rem] md:h-[29rem] md:w-56 lg:h-[42rem] lg:w-[24rem] xl:h-[48rem] xl:w-[24rem]  3xl:h-[63.8rem] 3xl:w-[35rem] justify-end  z-50 "></div>
+        <section className="absolute z-0  right-0 translate-y-[44%] mb:translate-y-[50%] min-[500px]:translate-y-[72%] sm:translate-y-[72%]  md:-translate-y-[45%] ">
+          <div className="tree w-64  h-[28rem]  mb:h-[28rem] md:h-[29rem] md:w-56 lg:h-[42rem] lg:w-[24rem] xl:h-[48rem] xl:w-[24rem]  3xl:h-[63.8rem] 3xl:w-[35rem] justify-end "></div>
         </section>
       </div>
     </>
