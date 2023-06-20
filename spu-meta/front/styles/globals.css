@@ -251,7 +251,14 @@ body {
   background-image: url("../public/image/footertree.png");
   background-size: 26rem 28rem;
   background-repeat: no-repeat;
-  background-position: left calc(-460%) top calc(105%);
+  background-position: left calc(-600%) top calc(120%);
+}
+@media only screen and (min-width: 412px) {
+  .tree {
+    background-size: 26rem 28rem;
+    background-repeat: no-repeat;
+    background-position: left calc(-408%) top calc(109%);
+  }
 }
 @media only screen and (min-width: 768px) {
   .tree {

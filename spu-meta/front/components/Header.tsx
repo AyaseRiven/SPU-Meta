@@ -76,7 +76,7 @@ const Header = () => {
                     </picture>
                   </div>
                 </div>
-                <div className=" py-6 md:py-8 3xl:py-10 max-sm:text-center ">
+                <div className=" py-6 md:py-8 3xl:py-10 text-center ">
                   <div className="font-bold text-black -tracking-tighter font-size-sm-[32] md:font-size-[40] ">
                     {data.attributes.title}
                   </div>

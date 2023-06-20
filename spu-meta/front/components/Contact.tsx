@@ -181,7 +181,7 @@ const Contact: React.FC<ConBodyProps> = ({ offsetTop }) => {
                     </div>
                   </div>
                 </div>
-                <div className=" mx-auto pt-16 pb-16 md:pt-0 w-36 md:w-28 xl:w-44 3xl:w-64">
+                <div className=" mx-auto pt-16 pb-16 md:pt-0 w-40 mb:w-36 md:w-28 xl:w-44 3xl:w-64">
                   <div className="relative md:-bottom-8 lg:-bottom-10 xl:-bottom-16 3xl:-bottom-14">
                     <div className="absolute -inset-0 bg-gradient-to-r from-pink-700  to-pink-600 rounded-full blur opacity-100 transition duration-200"></div>
                     <Link

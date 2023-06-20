@@ -244,15 +244,15 @@ const Navbar2 = () => {
           <div
             className={
               nav
-                ? "absolute right-[-40px] duration-700   top-[-20px] mb:top-[-25px]  md:right-[-30px] md:top-[-50px]"
-                : "absolute right-[-500px] duration-700  top-[-20px] mb:top-[-25px]  md:right-[-30px] lg:right-[-16px] 3xl:right-[-16px] md:top-[-16px] lg:top-[-45px] xl:top-[-62px] 3xl:top-[-95px] "
+                ? "absolute right-[-40px] duration-700   top-[-32px] mb:top-[-25px]  md:right-[-30px] md:top-[-50px]"
+                : "absolute right-[-500px] duration-700  top-[-32px] mb:top-[-25px]  md:right-[-30px] lg:right-[-16px] 3xl:right-[-16px] md:top-[-16px] lg:top-[-45px] xl:top-[-62px] 3xl:top-[-95px] "
             }
           >
             <Link href="/">
               <div className="absolute -inset-2 blur-3xl -z-10 bg-gradient-to-t from-pink-700 via-pink-700 to-pink-500 rounded-bl-XXL opacity-50 transition duration-200 "></div>
               <button
                 type="button"
-                className="text-white w-60 mb:w-72 md:w-56 lg:w-64 xl:w-80 3xl:w-[420px] h-12 md:h-6 lg:h-10 xl:h-14 3xl:h-20 tracking-wider bg-gradient-to-t from-pink-700 via-pink-700 to-pink-500 hover:opacity-80 font-medium rounded-bl-XXL font-size-sm-[17] mb:font-size-sm-[18] md:font-size-[32] px-2 pr-16 py-2.5 md:py-4 md:pl-8 md:pt-5 md:pr-8 lg:pr-2  lg:py-2.5 3xl:pr-0 3xl:pl-8 3xl:pt-4 text-right justify-center inline-flex items-center mr-4 mb-2"
+                className="text-white w-60 mb:w-72 md:w-56 lg:w-64 xl:w-80 3xl:w-[420px] h-12 md:h-6 lg:h-10 xl:h-14 3xl:h-20 tracking-wider bg-gradient-to-t from-pink-700 via-pink-700 to-pink-500 hover:opacity-80 font-medium rounded-bl-XXL font-size-sm-[17] mb:font-size-sm-[16] md:font-size-[32] px-2 pr-16 py-2.5 md:py-4 md:pl-8 md:pt-5 md:pr-8 lg:pr-2  lg:py-2.5 3xl:pr-0 3xl:pl-8 3xl:pt-4 text-right justify-center inline-flex items-center mr-4 mb-2"
               >
                 ดาวน์โหลด SPU Metaverse
               </button>
@@ -261,8 +261,8 @@ const Navbar2 = () => {
         </div>
 
         {/* <!-- Pin to top right corner --> */}
-        <div className=" md:hidden relative h-16 w-6 ">
-          <div className="absolute right-[-20px] top-[-8px] mb:top-[-4px]">
+        <div className=" md:hidden relative h-20 w-6 ">
+          <div className="absolute right-[-20px] top-[-4px] mb:top-[4px]">
             <button
               type="button"
               className="w-16 h-[2.80rem] mb:w-20 tracking-widest bg-cyan-500 hover:bg-cyan-400/90 focus:ring-1 focus:ring-[#00ffff]/50 rounded-bl-main justify-center inline-flex items-center mr-4 mb:mr-2 mb-2 z-50"

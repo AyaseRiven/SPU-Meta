@@ -48,10 +48,10 @@ const Main_News = () => {
     <div id="Main_News" key={data?.result.data.id} className="bg_News">
       <div className=" container mx-auto px-6 sm:px-10 md:px-[5.5rem] lg:px-[9.2rem] xl:px-[9.3rem] 3xl:px-[22.7rem] pt-20 pb-20 md:pt-28 xl:pt-48 3xl:pt-40 md:pb-20 3xl:pb-40 ">
         <div className="mt-6 pb-6 3xl:mt-20 3xl:pb-28">
-          <h1 className="mb-2 3xl:mb-8 font-size-sm-[40] md:font-size-[72]   font-bold leading-none tracking-wider text-pink-600  text-center">
+          <h1 className="mb-2 3xl:mb-8 font-size-sm-[40] md:font-size-[72] font-bold leading-none tracking-wider text-pink-600  text-center">
             {data?.result.data.attributes.title}
           </h1>
-          <p className="mb-4 md:pb-4 lg:pb-8 xl:pb-12 3xl:pb-0 font-size-sm-[32] sm:font-size-sm-[20] md:font-size-[24] 3xl:font-size-[32] text-white lg:text-xl sm:px-16 xl:px-48 justify-center text-center">
+          <p className="mb-4 md:pb-4 lg:pb-8 xl:pb-12 3xl:pb-0 font-size-sm-[24] mb:font-size-sm-[32] sm:font-size-sm-[20] md:font-size-[24] 3xl:font-size-[32] text-white lg:text-xl sm:px-16 xl:px-48 justify-center text-center">
             {data?.result.data.attributes.sub_title}
           </p>
         </div>

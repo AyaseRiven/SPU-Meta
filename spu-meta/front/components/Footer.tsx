@@ -141,7 +141,7 @@ const Footer = () => {
       <footer className=" bg-black text-white px-6 pt-6 md:hidden">
         <div className="grid grid-cols-3 gap-8">
           <div className=" container mx-auto pl-4 pr-10 col-span-2">
-            <h6 className=" flex font-size-sm-[40]  font-semibold uppercase  mb-5">
+            <h6 className=" flex font-size-sm-[40] mb:font-size-sm-[35] font-semibold uppercase  mb-5">
               เกี่ยวกับเรา
             </h6>
             <p className="text-neutral-400 leading-6 font-size-sm-[24]  tracking-widest">
@@ -220,7 +220,7 @@ const Footer = () => {
         <div>
           <div className="grid grid-cols-2 gap-2">
             <div className="px-4 pt-10 pb-3">
-              <h6 className="mb-2 flex font-size-sm-[40] font-semibold uppercase tracking-wider ">
+              <h6 className="mb-2 flex font-size-sm-[40] mb:font-size-sm-[35] font-semibold uppercase tracking-wider ">
                 ติดต่อเรา
               </h6>
 
