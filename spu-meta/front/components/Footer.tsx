@@ -87,10 +87,7 @@ const Footer = () => {
                     Sripatum University
                   </div>
                 </Link>
-                <Link
-                  href="https://www.facebook.com/SPUsripatumuniversity"
-                  target="_blank"
-                >
+                <Link href="" target="_blank">
                   <div className="flex items-center justify-center md:justify-start text-neutral-300 font-size-[24]  hover:text-pink-500">
                     <p className="image_social w-3 h-2 lg:h-6 lg:w-6 bottom-4 bg-no-repeat bg-[left_calc(0%)_top_calc(68%)] mr-5"></p>
                     @sripatum
@@ -180,7 +177,7 @@ const Footer = () => {
                     href="/blogs"
                     className="text-neutral-300 hover:text-pink-500  font-size-sm-[20] "
                   >
-                    blogs
+                    Blogs
                   </Link>
                 </p>
               </div>

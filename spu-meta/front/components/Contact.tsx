@@ -52,19 +52,30 @@ const Contact: React.FC<ConBodyProps> = ({ offsetTop }) => {
               <h2 className="font-size-sm-[40] sm:font-size-sm-[32] md:font-size-[40] text-white font-bold pb-4 md:pb-4 3xl:pb-8">
                 ที่อยู่
               </h2>
-              <p className="text-gray-400 tracking-wider md:tracking-normal font-size-sm-[24] md:font-size-[32] leading-3">
-                Email : {data?.result.data.attributes.email}
-              </p>
-              <p className="text-gray-400 tracking-wider md:tracking-normal font-size-sm-[24] md:font-size-[32]">
-                Facebook : {data?.result.data.attributes.facebook}
-              </p>
-              <p className="text-gray-400 tracking-wider md:tracking-normal font-size-sm-[24] md:font-size-[32] leading-3">
-                Line : {data?.result.data.attributes.line}
-              </p>
-              <p className="text-gray-400 tracking-wider md:tracking-normal font-size-sm-[24] md:font-size-[32] pb-8 md:pb-5 lg:pb-4 xl:pb-8 3xl:pb-20">
-                Tel : {data?.result.data.attributes.tel}
-              </p>
-              <p className="text-gray-400 lg:w-52 xl:w-72 3xl:w-96 md:pt-3 lg:pt-0 3xl:pt-0 tracking-wider md:tracking-normal font-size-sm-[24] md:font-size-[32]">
+              <Link href="mailto:abc@example.com?subject = Feedback&body = Message">
+                <p className="text-gray-400 tracking-wider md:tracking-normal  hover:text-pink-500  font-size-sm-[24] md:font-size-[32] leading-3">
+                  Email : {data?.result.data.attributes.email}
+                </p>
+              </Link>
+              <Link
+                href="https://www.facebook.com/SPUsripatumuniversity"
+                target="_blank"
+              >
+                <p className="text-gray-400 tracking-wider md:tracking-normal hover:text-pink-500  font-size-sm-[24] md:font-size-[32]">
+                  Facebook : {data?.result.data.attributes.facebook}
+                </p>
+              </Link>
+              <Link href="" target="_blank">
+                <p className="text-gray-400 tracking-wider md:tracking-normal hover:text-pink-500  font-size-sm-[24] md:font-size-[32] leading-3">
+                  Line : {data?.result.data.attributes.line}
+                </p>
+              </Link>
+              <Link href="tel:02-558-6888">
+                <p className="text-gray-400 tracking-wider md:tracking-normal hover:text-pink-500  font-size-sm-[24] md:font-size-[32] pb-8 md:pb-5 lg:pb-4 xl:pb-8 3xl:pb-20">
+                  Tel : {data?.result.data.attributes.tel}
+                </p>
+              </Link>
+              <p className="text-gray-400 lg:w-52 xl:w-72 3xl:w-96 md:pt-3 lg:pt-0 3xl:pt-0  tracking-wider md:tracking-normal font-size-sm-[24] md:font-size-[32]">
                 {data?.result.data.attributes.address}
               </p>
               {/* <p className="text-gray-400 tracking-wider md:tracking-normal font-size-sm-[24] md:font-size-[32] leading-5">
