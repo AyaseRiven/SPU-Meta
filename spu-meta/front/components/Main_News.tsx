@@ -103,7 +103,7 @@ const Main_News = () => {
         <div className="relative w-44 mx-auto 3xl:mt-16 md:w-36 xl:w-56 3xl:w-80 -bottom-3">
           <div className="absolute inset-[-4px] bg-gradient-to-r from-pink-700  to-pink-700 rounded-full blur-xl opacity-100 transition duration-200 "></div>
           <Link
-            href="/"
+            href="/blogs"
             className="relative py-3 md:py-3 lg:py-4 3xl:py-5 font-size-sm-[20] md:font-size-[32] 3xl:font-size-[32] text-white text-center justify-center bg-gradient-to-t from-pink-700 via-pink-700 to-pink-600 hover:opacity-80 rounded-full leading-none flex tracking-wider "
           >
             {data?.result.data.attributes.button}
